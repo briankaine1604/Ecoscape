@@ -1,15 +1,15 @@
 import '@/styles/global.css'
-import Dropdown from '@components/burgermenu/dropdownmenu'
+
 import Navbar from '@components/navbarmenu/navbar'
 
 
 const Rootlayout = ({children}) => {
   return (
     <html>
-        <body>
+        <body className=''>
         <div className=''><Navbar/></div>
               
-              <div className='sm:hidden'><Dropdown/></div>
+       
             <main className='h-1/2'>
               
                 {children}

@@ -3,10 +3,17 @@
 const Categories = () => {
   return (
     <div className=''>
-        <div className='w-1/3 h-84 bg-black '>
-
+        <div className=''>
+          Explore our diversity
         </div>
+        
+        <div>Ecosystem</div>
+        <div>Green life</div>
+        <div>Outdoor activities</div>
         <div>Nature Landmarks</div>
+        <div>Nature News</div>
+        <div>Nature Travels</div>
+        
     </div>
   )
 }

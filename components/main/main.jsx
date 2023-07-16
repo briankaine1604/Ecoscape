@@ -8,7 +8,7 @@ const MainImage = () => {
   return (
      
     
-    <div className='relative overflow-hidden h-full w-full border border-red-500'>
+    <div className='relative overflow-hidden h-auto sm:py-20 w-full'>
     <Heading/> 
     <Image
     fill={true}

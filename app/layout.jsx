@@ -7,12 +7,9 @@ const Rootlayout = ({children}) => {
   return (
     <html>
         <body className=''>
-        <div className=''><Navbar/></div>
-              
-       
-            <main className='h-1/2'>
-              
-                {children}
+        <Navbar/>
+            <main > 
+                <div className=''>{children}</div>
             </main>
         </body>
     </html>

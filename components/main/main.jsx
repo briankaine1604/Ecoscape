@@ -8,12 +8,12 @@ const MainImage = () => {
   return (
      
     
-    <div className='relative overflow-hidden h-auto sm:py-20 w-full'>
+    <div className='relative top-20 overflow-hidden h-auto sm:py-32 w-full'>
     <Heading/> 
     <Image
     fill={true}
     style={{objectFit:"cover"}}
-    src="/image/mainimage5.jpg"
+    src="/image/mainimage4.jpg"
     alt='picture of a beautiful Forest '
     /></div>
     

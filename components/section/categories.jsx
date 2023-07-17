@@ -2,14 +2,14 @@
 
 const Categories = () => {
   return (
-    <div className=''>
-        <div className=''>
-          Explore our diversity
+    <div className='relative gothic top-24'>
+        <div className='text-3xl font-bold w-fit mx-auto border-black text-center border-b-4'>
+          Explore our Diversity
         </div>
         
         <div>Ecosystem</div>
         <div>Green life</div>
-        <div>Outdoor activities</div>
+        <div>Wild life</div>
         <div>Nature Landmarks</div>
         <div>Nature News</div>
         <div>Nature Travels</div>

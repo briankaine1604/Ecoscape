@@ -1,4 +1,5 @@
 
+import Footer from '@components/footer/page'
 import MainImage from '@components/main/main'
 import Categories from '@components/section/categories'
 import React from 'react'
@@ -9,6 +10,7 @@ const Home = () => {
       
       <MainImage/>
       <Categories/>
+      <Footer/>
     </div>
   )
 }

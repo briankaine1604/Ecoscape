@@ -16,4 +16,23 @@
     .navlist{
         @apply w-auto h-10 my-5 flex items-center justify-center
     }
+
+    .categories{
+        @apply flex-col  border-l-4 border-black ml-4 px-4 h-fit align-middle
+    }
+
+    .icard{
+        @apply flex items-center shadow-md mb-4 drop-shadow-lg
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+          transform: translateY(-25%);
+          animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+          transform: translateY(0);
+          animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+      }
 }

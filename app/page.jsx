@@ -1,7 +1,8 @@
 
-import Footer from '@components/footer/page'
+import Footer from '@components/footer/footer'
 import MainImage from '@components/main/main'
 import Categories from '@components/section/categories'
+import Topstories from '@components/section/topstories'
 import React from 'react'
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       
       <MainImage/>
       <Categories/>
+      <Topstories/>
       <Footer/>
     </div>
   )

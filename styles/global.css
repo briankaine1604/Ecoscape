@@ -25,6 +25,10 @@
         @apply flex items-center shadow-md mb-4 drop-shadow-lg
     }
 
+    .head1{
+        @apply text-4xl font-bold w-fit mx-auto border-black text-center border-b-4 mb-4
+    }
+
     @keyframes bounce {
         0%, 100% {
           transform: translateY(-25%);

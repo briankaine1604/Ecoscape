@@ -22,7 +22,11 @@
     }
 
     .icard{
-        @apply flex items-center shadow-md mb-4 drop-shadow-lg
+        @apply flex items-center mb-4 
+    }
+
+    .footText{
+        @apply text-lg text-white gothic
     }
 
     .head1{
@@ -40,3 +44,29 @@
         }
       }
 }
+
+.custom-image {
+    transform: perspective(400px) rotate3d(1, 0, 0, calc(var(--i, 1) * 3deg));
+    mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100% / 240% 240%;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  
+  
+  .diveffect:hover{
+    cursor: pointer;
+    
+  }
+  
+  .custom-image:hover{
+    --i: -1;
+    mask-position: 0 0;
+    
+  }
+  
+
+  .diveffect:hover + .custom-image {
+    --i: -1;
+    mask-position: 0 0;
+    
+  }

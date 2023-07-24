@@ -22,7 +22,7 @@ const Footer = () => {
         <div className='pr-4 '>
           <form action="/send-data-here" method="post" className='flex-col flex'>
             
-          <div className=''><label for="mail" className='footText' >Subscribe to our weekly news letter</label></div>
+          <div className=''><label htmlFor="mail" className='footText' >Subscribe to our weekly news letter</label></div>
           <input type="email" id="email" name="email" placeholder='johnwill@gmail.com' className='p-2'/>
           <div><button type="submit">Sign up</button></div>
           

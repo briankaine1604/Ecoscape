@@ -14,7 +14,8 @@ module.exports = {
           100:'#FFB6C1',
           200:'#FF69B4'
         },
-        olivegreen:'rgba(66,90,72,1)'
+        olivegreen:'rgba(66,90,72,1)',
+        snow:'rgb(255,250,250)'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

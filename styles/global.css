@@ -30,7 +30,7 @@
     }
 
     .head1{
-        @apply text-4xl font-bold w-fit mx-auto border-black text-center border-b-4 mb-4
+        @apply text-4xl font-bold w-fit mx-auto text-center my-4
     }
 
     @keyframes bounce {
@@ -70,3 +70,7 @@
     mask-position: 0 0;
     
   }
+
+  .boxshadow{
+   box-shadow:  0 0 10px rgba(0, 0, 0, .25);
+  } 

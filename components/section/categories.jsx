@@ -12,7 +12,7 @@ const Categories = () => {
   ]
   return (
     <div className='relative gothic mt-20 flex flex-col '>
-        <div className='head1 border-hidden'>
+        <div className='head1'>
         THE ECOSYSTEM
         </div >
         
@@ -29,6 +29,7 @@ const Categories = () => {
                 style={{objectFit:"cover"}}
                 src={`/image/${catcard.image}.jpg`}
                 alt={catcard.alttext}
+                loading="lazy"
                 />
               </div>
               </div>

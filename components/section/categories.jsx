@@ -17,18 +17,18 @@ const Categories = () => {
         </div >
         
           <div className=" mx-auto">
-            {catcards.map((catcard,index)=>(
+            {catcards.map(({index,Title,description,box1,box2,image,alttext})=>(
               <div key={index} className="icard ">
-              <div className={`categories diveffect ${catcard.box1}`}>
-              <div className="text-2xl">{catcard.Title} </div>
-              <div className="text-lg">{catcard.description}</div>
+              <div className={`categories diveffect ${box1}`}>
+              <div className="text-2xl">{Title} </div>
+              <div className="text-lg">{description}</div>
               </div>
-              <div className={`relative h-52 w-52 custom-image box2 ${catcard.box2}`}>
+              <div className={`relative h-52 w-52 custom-image box2 ${box2}`}>
                 <Image
                 fill={true}
                 style={{objectFit:"cover"}}
-                src={`/image/${catcard.image}.jpg`}
-                alt={catcard.alttext}
+                src={`/image/${image}.jpg`}
+                alt={alttext}
                 loading="lazy"
                 />
               </div>

@@ -13,7 +13,7 @@ const Keyprojects = () => {
         {index: 4,title:'Plant Research',description:'Encourage users to participate in citizen science projects, where they can contribute to research and data collection efforts that aid in understanding and conserving nature.',image:'/image/plantresearch.jpg',alt:'Plant Science'},
     ]
 
-    const[currentslide, setcurrentslide]= useState(0);
+    const[currentslide, setcurrentslide]= useState(1);
 
     const nextslide=()=>{
         setcurrentslide((slide)=>(slide + 1)% projects.length)
@@ -23,27 +23,32 @@ const Keyprojects = () => {
         setcurrentslide((slide)=>(slide - 1 + projects.length)% projects.length)
     }
 
-    useEffect(()=>{
-        const interval= setInterval(nextslide,1000);
-        return ()=> clearInterval(interval)
-    },[])
+    
+        useEffect(() => {
+          const id = setInterval(() => {}, 2000);
+          return () => {
+            clearInterval(id);
+          };
+        }, []);
+    
+        
   return (
     <div className=''>
         <div className='head1 gothic mt-20'>PROJECTS</div>
         <div className='flex drop-shadow-xl w-10/12 items-center justify-between bg-gray-50 mx-auto rounded-xl p-5 py-10'>
-            {projects.map((project)=>(
-                <div key={project.index} className='w-5/12 gothic'>
-                <div className='text-2xl  font-medium'>{project.title}</div>
-                <div className=''> {project.description}
+            {projects.filter(({title,description,index,image,alt})=>(
+                <div key={index} className='w-5/12 gothic'>
+                <div className='text-2xl  font-medium'>{title}</div>
+                <div className=''> {description}
                 </div>
                 <div className='w-1/2 flex items-center '>
                 <button className='w-1/12 z-10' onClick={prevslide}><IoIosArrowDropleft className='text-4xl '/></button> 
-                <div className='bg-black w-11/12 h-64 rounded-2xl'>
+                <div className='bg-black w-11/12 h-64 rounded-2xl relative'>
                 <Image
                 fill={true}
                 style={{objectFit:"cover"}}
-                src={project.image}
-                alt={project.alt}
+                src={image}
+                alt={alt}
                 loading="lazy"
                 />
                 </div>

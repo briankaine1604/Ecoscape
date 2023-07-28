@@ -4,11 +4,11 @@ import Image from "next/image"
 const Categories = () => {
 
   const catcards= [
-    {Title:'Green life',description:'Examining the Resilience of Coral Reefs and Ocean Life',box1:'order-2',box2:'order-1',image:'greenlife',alttext:'Picture of a beautiful Forest'},
-    {Title:'Wild life',description:'Examining the Resilience of Coral Reefs and Ocean Life',box1:'order-1',box2:'order-2',image:'wildlife',alttext:'Picture of a beautiful Forest'},
-    {Title:'Nature Landmarks ',description:'Examining the Resilience of Coral Reefs and Ocean Life',box1:'order-2',box2:'order-1',image:'naturelandmark',alttext:'Picture of a beautiful Forest'},
-    {Title:'Nature News',description:'Examining the Resilience of Coral Reefs and Ocean Life',box1:'order-1',box2:'order-2',image:'naturenews',alttext:'Picture of a beautiful Forest'},
-    {Title:'Nature Travels',description:'Examining the Resilience of Coral Reefs and Ocean Life',box1:'order-2',box2:'order-1',image:'naturetravel',alttext:'Picture of a beautiful Forest'},
+    {index:1,Title:'Green life',description:'Examining the Resilience of Coral Reefs and Ocean Life',box1:'order-2',box2:'order-1',image:'greenlife',alttext:'Picture of a beautiful Forest'},
+    {index:2,Title:'Wild life',description:'Examining the Resilience of Coral Reefs and Ocean Life',box1:'order-1',box2:'order-2',image:'wildlife',alttext:'Picture of a beautiful Forest'},
+    {index:3,Title:'Nature Landmarks ',description:'Examining the Resilience of Coral Reefs and Ocean Life',box1:'order-2',box2:'order-1',image:'naturelandmark',alttext:'Picture of a beautiful Forest'},
+    {index:4,Title:'Nature News',description:'Examining the Resilience of Coral Reefs and Ocean Life',box1:'order-1',box2:'order-2',image:'naturenews',alttext:'Picture of a beautiful Forest'},
+    {index:5,Title:'Nature Travels',description:'Examining the Resilience of Coral Reefs and Ocean Life',box1:'order-2',box2:'order-1',image:'naturetravel',alttext:'Picture of a beautiful Forest'},
   ]
   return (
     <div className='relative gothic mt-20 flex flex-col '>

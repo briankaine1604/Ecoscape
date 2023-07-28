@@ -19,15 +19,9 @@ const Footer = () => {
         <div className='footText flex align-middle items-center'><BiCopyright className=''/> 2023 EcoScape.  All rights reserved.</div>
         <div className='footText'>Contact: +2347068802091 </div>
         </div>
-        <div className='pr-4 '>
-          <form action="/send-data-here" method="post" className='flex-col flex'>
-            
-          <div className=''><label htmlFor="mail" className='footText' >Subscribe to our weekly news letter</label></div>
-          <input type="email" id="email" name="email" placeholder='johnwill@gmail.com' className='p-2'/>
-          <div><button type="submit">Sign up</button></div>
-          
-        </form>
-        </div>
+        
+          <button className='text-white pr-4 border border-white w-1/5 h-fit p-2'>Sign up for our newsletter</button>
+        
       </div>
     </div>
   )

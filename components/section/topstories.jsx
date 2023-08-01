@@ -9,11 +9,11 @@ import {FaCanadianMapleLeaf} from 'react-icons/fa'
 const Topstories = () => {
   
     const boxcon= [
-        {index: 1,Title:'Tourist Attraction',Description:'Best Nature landmarks to visit', position:'justify-start', image:'globalwarming'},
+        {index: 1,Title:'Climate Crisis Chronicles',Description:' Impact of Global Warming on Nature and Our Planet', position:'justify-start', image:'globalwarming'},
 
-        {index: 2,Title:'Nature News',Description:'Best Nature landmarks to visit', position:'justify-start',image:'nature'},
+        {index: 2,Title:'Waterfall Wonders',Description:"Capturing the Artistry of Nature's Cascading Beauty", position:'justify-start',image:'nature'},
 
-        {index: 3,Title:'Donation',Description:'Research and Development', position:'justify-start',image:'hiking'},
+        {index: 3,Title:'Frozen Giants',Description:'The Impact of Glacial Melting on Mountain Habitats', position:'justify-start',image:'hiking'},
     ]
    
     return (
@@ -35,7 +35,7 @@ const Topstories = () => {
         
         
         <div className='flex justify-center w-fit '>
-            <div className='h-72 w-80 relative shadow-lg'>
+            <div className='h-96 w-2/6 relative shadow-lg'>
             <Image
                 fill={true}
                 style={{objectFit:"cover"}}
@@ -44,7 +44,7 @@ const Topstories = () => {
                 loading="lazy"
                 />
             </div>
-            <div className=' w-3/6 h-72 gothic shadow-lg p-3'>
+            <div className=' w-3/6 h-96 gothic shadow-lg p-3'>
                 <div className='flex text-2xl font-semibold justify-between '>Empower Nature's Guardians <BiDonateHeart className='text-5xl '/> </div>
                 
                 <div className='text-xl mt-2 text-justify w-10/12'>Join us in transforming lives and landscapes in third-world nations. Your donation fuels sustainable projects, conserves habitats, and empowers local communities. 
@@ -52,21 +52,22 @@ const Topstories = () => {
             </div>
         </div>
         <div className='head1 gothic border-hidden mt-20 mx-auto'>TOP STORIES</div>
-    <div className=' p-5 flex justify-center'>
-        {boxcon.map(({index,image,description, Title})=>(
-             <div key={index} className='flex my-2 '>
-             <div className='w-40 h-40 sm:w-72 sm:h-64 bg-black mx-6 shadow-lg relative'>
+    <div className=' flex justify-center'>
+        {boxcon.map(({index,image,Description, Title})=>(
+             <div key={index} className='flex-col mx-5 shadow-lg w-full'>
+             <div className='sm:w-full sm:h-72 bg-black relative'>
              <Image
                 fill={true}
                 style={{objectFit:"cover"}}
                 src={`/image/${image}.jpg`}
-                alt={description}
+                alt={Description}
                 loading="lazy"
                 />
+                
              </div>
-             <div className='flex'>
-             <div className='w-fit text-2xl hidden'>{Title}</div>
-             <div className='w-60 hidden'>{description}</div>
+             <div className='w-40 h-40 sm:w-72 sm:h-72 gothic p-5 '>
+             <div className='text-3xl font-medium'>{Title}</div>
+             <div className='text-lg'>{Description}</div>
              </div>
          </div>
         ))}

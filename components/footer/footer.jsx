@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <div className='relative w-full bg-black h-44 mt-10 flex justify-center '>
+    <div className='relative w-full bg-olivegreen h-44 mt-10 flex justify-center '>
       <div className='flex w-1/3 justify-between absolute bottom-4'>
       <Link href='#'><BsInstagram className='text-3xl text-white'/></Link>
       <Link href='#'><BsTwitter className='text-3xl text-white'/></Link>

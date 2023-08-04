@@ -10,7 +10,7 @@ const Navbarlist = () => {
         <ul className='md:grid grid-cols-5 text-white gothic gap-10 w-auto h-fit col-span-2 hidden'>
         <Link href="/"> 
         <li className='navlist  hover:border-b-2'>
-          Home
+        Home
         </li>
         </Link>
         <Link href="/blog">
@@ -18,14 +18,14 @@ const Navbarlist = () => {
         Blog
         </li>
         </Link>
-        <Link href="/about">
-        <li className='navlist  hover:border-b-2'>
-        About
-        </li>
-        </Link>
         <Link href="/donate">
         <li className='navlist  hover:border-b-2'>
-       Donate
+        Donate
+        </li>
+        </Link>
+        <Link href="/store">
+        <li className='navlist  hover:border-b-2'>
+        Store
         </li>
         </Link>
         <Link href="/subscribe">

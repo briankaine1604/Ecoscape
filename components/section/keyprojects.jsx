@@ -46,9 +46,9 @@ const Keyprojects = () => {
     <div className="w-full">
       <div className='head1 gothic mt-20'>PROJECTS</div>
       <div className="flex-col w-full items-center mx-auto justify-center">
-      <div className="w-full mx-auto flex items-center">
-        <button onClick={displayPreviousObject}><IoIosArrowDropleft className='text-4xl '/></button>
-        <div key={currentObject.index} className='w-11/12 h-96  relative overflow-hidden '>
+      <div className="w-full mx-auto flex items-center justify-center">
+        <button onClick={displayPreviousObject}><IoIosArrowDropleft className='text-4xl'/></button>
+        <div key={currentObject.index} className='w-10/12 h-96  relative overflow-hidden '>
                 <Image
                 fill={true}
                 style={{objectFit:"cover"}}

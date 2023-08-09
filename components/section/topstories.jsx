@@ -28,8 +28,8 @@ const Topstories = () => {
                 loading="lazy"
                 />
                 <div className='absolute text-white gothic'>
-                    <div className='text-7xl flex justify-center font-bold'>3 Million Trees Strong: </div>
-                    <div className='text-4xl flex justify-center'>Over 3,150,940+ Trees planted<FaCanadianMapleLeaf className='ml-3'/></div>
+                    <div className='text-3xl sm:text-5xl md:text-6xl flex justify-center font-bold'>3 Million Trees Strong: </div>
+                    <div className='text-xl sm:text-3xl md:text-3xl flex justify-center'>Over 3,150,940+ Trees planted<FaCanadianMapleLeaf className='ml-3'/></div>
                 </div>
         </div>
         

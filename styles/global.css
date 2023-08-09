@@ -18,11 +18,11 @@
     }
 
     .categories{
-        @apply flex-col  border-l-4 border-black ml-4 px-4 h-fit align-middle
+        @apply flex-col  md:border-l-4 border-black md:ml-4 px-4 h-fit align-middle p-6 md:p-0
     }
 
     .icard{
-        @apply flex items-center mb-4 
+        @apply flex md:flex-row flex-col items-center mb-6 md:mb-4 shadow-xl md:shadow-none 
     }
 
     .footText{
@@ -45,12 +45,15 @@
       }
 }
 
-.custom-image {
+@media (min-width: 768px) {
+  .custom-image {
     transform: perspective(400px) rotate3d(1, 0, 0, calc(var(--i, 1) * 3deg));
     mask: linear-gradient(135deg, #000c 40%, #000, #000c 60%) 100% 100% / 240% 240%;
     transition: 0.4s;
     cursor: pointer;
   }
+}
+
   
   
   .diveffect:hover{

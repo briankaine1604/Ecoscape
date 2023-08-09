@@ -46,9 +46,9 @@ const Keyprojects = () => {
     <div className="w-full">
       <div className='head1 gothic mt-20'>PROJECTS</div>
       <div className="flex-col w-full items-center mx-auto justify-center">
-      <div className="w-full mx-auto flex items-center justify-center">
-        <button onClick={displayPreviousObject}><IoIosArrowDropleft className='text-4xl'/></button>
-        <div key={currentObject.index} className='w-10/12 h-96  relative overflow-hidden '>
+      <div className="w-full mx-auto flex items-center justify-center group">
+        <button onClick={displayPreviousObject}><IoIosArrowDropleft className='text-4xl hidden group-hover:flex'/></button>
+        <div key={currentObject.index} className='w-10/12 h-72 md:h-96  relative overflow-hidden '>
                 <Image
                 fill={true}
                 style={{objectFit:"cover"}}
@@ -58,11 +58,11 @@ const Keyprojects = () => {
                 className="z-0"
                 />
                 <div className="w-full bg-white gothic flex-col h-fit text-black bg-opacity-40 z-20 absolute bottom-0 p-2 shadow-md">
-                <Link className="" href={currentObject.link}><h2 className='text-2xl  font-bold '>{currentObject.title}</h2>
-                <p className="text-xl font-medium">{currentObject.description}</p></Link>
+                <Link className="" href={currentObject.link}><h2 className='text-xl md:text-2xl  font-bold '>{currentObject.title}</h2>
+                <p className="text-md md:text-xl font-medium">{currentObject.description}</p></Link>
                 </div>
                 </div>
-        <button onClick={displayNextObject}><IoIosArrowDropright className='text-4xl '/></button>
+        <button onClick={displayNextObject}><IoIosArrowDropright className='text-4xl hidden group-hover:flex '/></button>
         
       </div>
       

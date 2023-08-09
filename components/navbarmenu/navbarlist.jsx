@@ -5,9 +5,9 @@ import Dropdown from '@components/burgermenu/dropdownmenu'
 
 const Navbarlist = () => {
   return (
-    <div className='md:grid grid-cols-4 flex justify-between'>
+    <div className='lg:grid grid-cols-4 flex justify-between'>
         <div className='navlist text-white'><Link className="" href="/"> <Image src="/image/bikwhite.png" className="" width={170} height={170} alt=""/> </Link></div>
-        <ul className='md:grid grid-cols-5 text-white gothic gap-10 w-auto h-fit col-span-2 hidden'>
+        <ul className='lg:grid grid-cols-5 text-white gothic gap-10 w-auto h-fit col-span-2 hidden'>
         <Link href="/"> 
         <li className='navlist  hover:border-b-2'>
         Home
@@ -35,8 +35,8 @@ const Navbarlist = () => {
         </Link>
         </ul>
         <div className='navlist '>
-        <div className='md:hidden border'><Dropdown/></div>
-        <button className="navlist md:flex px-7 text-olivegreen font-bold py-2 rounded-3xl bg-white gothic hidden hover:drop-shadow-2xl ">Sign In</button>
+        <div className='lg:hidden border'><Dropdown/></div>
+        <button className="navlist lg:flex px-7 text-olivegreen font-bold py-2 rounded-3xl bg-white gothic hidden hover:drop-shadow-2xl ">Sign In</button>
         </div>
     </div>
   )

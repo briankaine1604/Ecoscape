@@ -19,7 +19,7 @@ const Topstories = () => {
     return (
 
     <div className=' flex-col relative items-center '>
-        <div className='relative w-full h-96  bg-black my-10 flex justify-center items-center'>
+        <div className='relative w-full h-96 bg-black my-10 flex justify-center items-center'>
              <Image
                 fill={true}
                 style={{objectFit:"cover"}}
@@ -34,38 +34,37 @@ const Topstories = () => {
         </div>
         
         
-        <div className='flex w-full border'>
-            <div className='group flex justify-center w-fit h-fit border border-red-500'>
-            <div className='w-1/4 h-72 relative overflow-hidden'>
+            <div className='group hidden sm:flex-col w-full md:w-10/12 md:h-72 gap-4 md:grid grid-cols-3 justify-center mx-auto'>
+            <div className=' relative w-full h-52 overflow-hidden col-span-1'>
             <Image
                 fill={true}
                 style={{objectFit:"cover"}}
                 src="/image/hands.jpg"
                 alt="Feed the nation"
                 loading="lazy"
-                className='transition ease-in-out delay-300 group-hover:scale-125 duration-300 hover:opacity-90'
+                className='transition ease-in-out  group-hover:scale-[1.1] duration-200 delay-75'
                 />
             </div>
-            <div className=' w-6/12 h-fit gothic border'>
-                <div className='flex text-2xl font-semibold justify-between mr-10 mt-5 ml-10 border-l-4 items-center border-black pl-2'>Empower Nature's Guardians <BiDonateHeart className='text-6xl '/> </div>
+            <div className='  gothic col-span-2'>
+                <div className='flex text-2xl font-semibold justify-between mr-10 mt-5 ml-10  items-center pl-2'>Empower Nature's Guardians <BiDonateHeart className='text-6xl '/> </div>
                 
-                <div className='text-xl mt-2 text-justify w-9/12 ml-12'>Join us in transforming lives and landscapes in third-world nations. Your donation fuels sustainable projects, conserves habitats, and empowers local communities. 
+                <div className='text-xl mt-2 text-justify w-full md:w-9/12 ml-12  '>Join us in transforming lives and landscapes in third-world nations. Your donation fuels sustainable projects, conserves habitats, and empowers local communities. 
                     Together, let's create a greener future and protect the heartbeat of our planet. Be a catalyst for change today!</div>
             </div>
             </div>
-        </div>
+       
         <div className='head1 gothic border-hidden mt-20 mx-auto hidden'>TOP STORIES</div>
-    <div className=' flex justify-center mt-10'>
+    <div className='flex-col md:grid grid-cols-3 p-2 gap-4 w-full lg:w-10/12 mx-auto mt-10'>
         {boxcon.map(({index,image,Description, Title})=>(
-             <div key={index} className='flex-col mx-5 shadow-lg group w-1/4'>
-             <div className='sm:w-full sm:h-72 relative overflow-hidden'>
+             <div key={index} className='flex-col  shadow-lg group '>
+             <div className='w-full h-40 sm:h-72 relative overflow-hidden'>
              <Image
                 fill={true}
                 style={{objectFit:"cover"}}
                 src={`/image/${image}.jpg`}
                 alt={Description}
                 loading="lazy"
-                className='transition ease-in-out delay-300 group-hover:scale-125 duration-300 hover:opacity-90'
+                className='transition ease-in-out  group-hover:scale-[1.1] duration-200 delay-75'
                 />
                 
              </div>

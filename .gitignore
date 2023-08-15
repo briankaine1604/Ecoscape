@@ -33,3 +33,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore service account key files
+ecoscape-395211-firebase-adminsdk-jog5q-4758614f37.json

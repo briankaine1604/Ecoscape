@@ -8,7 +8,7 @@ import {GrClose} from 'react-icons/gr'
 
 const Navbarlist = () => {
 
-  const isUserLoggedIn= true;
+  const {data:session }= useSession();
 
   const [toggle, setToggle]= useState(false);
 
@@ -27,13 +27,13 @@ const Navbarlist = () => {
   const [providers, setProviders]= useState(null);
 
   useEffect(()=>{
-    const setProviders= async ()=>{
+    const setUpProviders= async ()=>{
       const response= await getProviders();
 
       setProviders(response)
     }
 
-    setProviders();
+    setUpProviders();
   },[])
 
   return (
@@ -81,6 +81,7 @@ const Navbarlist = () => {
   <ul
     className="flex-col absolute z-40 left-0 top-0 w-full h-screen bg-olivegreen"
   >
+    {/*Mobile Navigation */}
     <button onClick={toggler} className="z-50 absolute top-4 right-4">
       <GrClose className="text-white text-2xl font-bold" />
     </button>
@@ -88,17 +89,26 @@ const Navbarlist = () => {
     <li>About</li>
     <li>Store</li>
     <div>
-        {isUserLoggedIn ? (
-      <button  onClick={signOut}>
-        Sign Out
-      </button>
+        {session?.user ? (
+      <div  >
+        <div>
+          <Image
+          src={session?.user.image}
+          width={37}
+          height={37}
+          className="rounded-full"
+          alt="profile"
+          onClick={signOut}
+          />
+        </div>
+      </div>
     ) : (
       providers &&
       Object.values(providers).map((provider) => (
         <button 
         type="button" 
         key={provider.name}  
-        onClick={()=>(provider.id)}>
+        onClick={()=>signIn(provider.id)}>
           Sign In
         </button>
   ))
@@ -111,14 +121,19 @@ const Navbarlist = () => {
 
           </div>
         <div>
-        {isUserLoggedIn ? (
-      <button className="navlist lg:flex px-7 text-white font-bold py-2 rounded-3xl bg-olivegreen border-2 border-white gothic hidden hover:drop-shadow-2xl" 
-      onClick={()=>{
-        setToggle(false);
-        signOut();
-      }}>
-        Sign Out
-      </button>
+        {session?.user ? (
+     <div  >
+     <div>
+       <Image
+       src={session?.user.image}
+       width={37}
+       height={37}
+       className="rounded-full"
+       alt="profile"
+       onClick={signOut}
+       />
+     </div>
+   </div>
     ) : (
       providers &&
       Object.values(providers).map((provider) => (
@@ -126,7 +141,7 @@ const Navbarlist = () => {
         type="button" 
         key={provider.name} 
         className="navlist lg:flex px-7 text-olivegreen font-semibold py-2 rounded-3xl bg-white gothic hidden hover:drop-shadow-2xl" 
-        onClick={()=>(provider.id)}>
+        onClick={()=>signIn(provider.id)}>
           Sign In
         </button>
   ))
